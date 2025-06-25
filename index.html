@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Page</title>
+    <!-- Link style.css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body class="container py-4">
+
+
+<header id="scoreboard">
+    <div >🏈 Sports Quiz 🏀</div>
+        <div id="start-screen" class="text-center">
+        <h1 class="mb-3 score-title">🏆 Welcome to the Sports Quiz!</h1>
+        <p>Select a difficulty:</p>
+        <button class="btn btn-success mx-1" onclick="startQuiz('easy')">Easy</button>                                                                                                                                                                                                                                                                            ick="startQuiz('easy')">Easy</button>
+        <button class="btn btn-warning mx-1" onclick="startQuiz('hard')">Hard</button>
+        <button class="btn btn-danger mx-1" onclick="startQuiz('elite')">Elite</button>
+    </div>
+</header>
+
+    <form id="quiz" class="mt-4" style="display:none;">
+        <!-- Question groups here (same as original, not repeated to save space) -->
+        <!-- Paste your full EASY, HARD, ELITE questions here from original -->
+
+<!-- EASY QUESTIONS -->
+        <div data-difficulty="easy" class="question-group">
+            <h2>Who is the best wide receiver in the NCAA?</h2>
+            <div>
+                <input type="radio" id="easy-football1" name="football" value="travisHunter" />
+                <label for="easy-football1">Travis Hunter</label>
+            </div>
+            <div>
+                <input type="radio" id="easy-football2" name="football" value="tmac" />
+                <label for="easy-football2">TMAC</label>
+            </div>
+            <div>
+                <input type="radio" id="easy-football3" name="football" value="jeremiahSmith" />
+                <label for="easy-football3">Jeremiah Smith</label>
+            </div>
+            <div>
+                <input type="radio" id="easy-football4" name="football" value="ryanWilliams" />
+                <label for="easy-football4">Ryan Williams</label>
+            </div>
+
+            <h2>Who is the youngest NBA player to have been drafted?</h2>
+            <div>
+                <input type="radio" id="easy-nba1" name="nba" value="jaMorant" />
+                <label for="easy-nba1">Ja Morant</label>
+            </div>
+            <div>
+                <input type="radio" id="easy-nba2" name="nba" value="anthonyEdwards" />
+                <label for="easy-nba2">Anthony Edwards</label>
+            </div>
+            <div>
+                <input type="radio" id="easy-nba3" name="nba" value="andrewBynum" />
+                <label for="easy-nba3">Andrew Bynum</label>
+            </div>
+            <div>
+                <input type="radio" id="easy-nba4" name="nba" value="lameloBall" />
+                <label for="easy-nba4">Lamelo Ball</label>
+            </div>
+
+            <h2>Who is the most famous tennis player?</h2>
+            <div>
+                <input type="radio" id="easy-tennis1" name="tennis" value="serenaWilliams" />
+                <label for="easy-tennis1">Serena Williams</label>
+            </div>
+            <div>
+                <input type="radio" id="easy-tennis2" name="tennis" value="crisEvert" />
+                <label for="easy-tennis2">Cris Evert</label>
+            </div>
+            <div>
+                <input type="radio" id="easy-tennis3" name="tennis" value="billieJeanKing" />
+                <label for="easy-tennis3">Billie Jean King</label>
+            </div>
+            <div>
+                <input type="radio" id="easy-tennis4" name="tennis" value="steffiGraf" />
+                <label for="easy-tennis4">Steffi Graf</label>
+            </div>
+
+            <label for="usaSport">What sport is famous in America?</label>
+            <input type="text" id="usaSport" name="usa" class="form-control w-50" />
+        </div>
+
+        <!-- HARD QUESTIONS -->
+        <div data-difficulty="hard" class="question-group">
+            <h2>Who holds the record for most career receiving yards in the NFL?</h2>
+            <div>
+                <input type="radio" id="hard-football1" name="football" value="jerryRice" />
+                <label for="hard-football1">Jerry Rice</label>
+            </div>
+            <div>
+                <input type="radio" id="hard-football2" name="football" value="larryFitzgerald" />
+                <label for="hard-football2">Larry Fitzgerald</label>
+            </div>
+            <div>
+                <input type="radio" id="hard-football3" name="football" value="calvinJohnson" />
+                <label for="hard-football3">Calvin Johnson</label>
+            </div>
+            <div>
+                <input type="radio" id="hard-football4" name="football" value="randyMoss" />
+                <label for="hard-football4">Randy Moss</label>
+            </div>
+
+            <h2>Which NBA player scored 100 points in a single game?</h2>
+            <div>
+                <input type="radio" id="hard-nba1" name="nba" value="wiltChamberlain" />
+                <label for="hard-nba1">Wilt Chamberlain</label>
+            </div> 
+            <div>
+                <input type="radio" id="hard-nba2" name="nba" value="kobeBryant" />
+                <label for="hard-nba2">Kobe Bryant</label>
+            </div>
+            <div>
+                <input type="radio" id="hard-nba3" name="nba" value="michaelJordan" />
+                <label for="hard-nba3">Michael Jordan</label>
+            </div>
+            <div>
+                <input type="radio" id="hard-nba4" name="nba" value="lebronJames" />
+                <label for="hard-nba4">LeBron James</label>
+            </div>
+
+            <h2>Who won 23 Grand Slam singles titles in the Open Era?</h2>
+            <div>
+                <input type="radio" id="hard-tennis1" name="tennis" value="serenaWilliams" />
+                <label for="hard-tennis1">Serena Williams</label>
+            </div>
+            <div>
+                <input type="radio" id="hard-tennis2" name="tennis" value="venusWilliams" />
+                <label for="hard-tennis2">Venus Williams</label>
+            </div>
+            <div>
+                <input type="radio" id="hard-tennis3" name="tennis" value="margaretCourt" />
+                <label for="hard-tennis3">Margaret Court</label>
+            </div>
+            <div>
+                <input type="radio" id="hard-tennis4" name="tennis" value="martinaNavratilova" />
+                <label for="hard-tennis4">Martina Navratilova</label>
+            </div>
+
+            <label for="heismanSport">What sport is the Heisman Trophy associated with?</label>
+            <input type="text" id="heismanSport" name="heisman" class="form-control w-50" />
+        </div>
+
+        <!-- ELITE QUESTIONS -->
+        <div data-difficulty="elite" class="question-group">
+            <h2>Youngest player to score a hat-trick in UEFA Champions League?</h2>
+            <div>
+                <input type="radio" id="elite-soccer1" name="soccer" value="kylianMbappe" />
+                <label for="elite-soccer1">Kylian Mbappé</label>
+            </div>
+            <div>
+                <input type="radio" id="elite-soccer2" name="soccer" value="raulGonzalez" />
+                <label for="elite-soccer2">Raúl González</label>
+            </div>
+            <div>
+                <input type="radio" id="elite-soccer3" name="soccer" value="erlingHaaland" />
+                <label for="elite-soccer3">Erling Haaland</label>
+            </div>
+            <div>
+                <input type="radio" id="elite-soccer4" name="soccer" value="wayneRooney" />
+                <label for="elite-soccer4">Wayne Rooney</label>
+            </div>
+
+            <h2>First NBA player to average a triple-double in a season?</h2>
+            <div>
+                <input type="radio" id="elite-triple1" name="triple" value="oscarRobertson" />
+                <label for="elite-triple1">Oscar Robertson</label>
+            </div>
+            <div>
+                <input type="radio" id="elite-triple2" name="triple" value="russellWestbrook" />
+                <label for="elite-triple2">Russell Westbrook</label>
+            </div>
+            <div>
+                <input type="radio" id="elite-triple3" name="triple" value="magicJohnson" />
+                <label for="elite-triple3">Magic Johnson</label>
+            </div>
+            <div>
+                <input type="radio" id="elite-triple4" name="triple" value="jasonKidd" />
+                <label for="elite-triple4">Jason Kidd</label>
+            </div>
+
+            <h2>Who holds the record for most ATP Masters 1000 titles?</h2>
+            <div>
+                <input type="radio" id="elite-atp1" name="atp" value="novakDjokovic" />
+                <label for="elite-atp1">Novak Djokovic</label>
+            </div>
+            <div>
+                <input type="radio" id="elite-atp2" name="atp" value="rafaelNadal" />
+                <label for="elite-atp2">Rafael Nadal</label>
+            </div>
+            <div>
+                <input type="radio" id="elite-atp3" name="atp" value="rogerFederer" />
+                <label for="elite-atp3">Roger Federer</label>
+            </div>
+            <div>
+                <input type="radio" id="elite-atp4" name="atp" value="andyMurray" />
+                <label for="elite-atp4">Andy Murray</label>
+            </div>
+
+            <label for="olympicCombo">Which Olympic sport combines skiing and shooting?</label>
+            <input type="text" id="olympicCombo" name="olympicCombo" class="form-control w-50" />
+        </div>
+
+        <button id="btn" type="submit" class="btn btn-primary mt-3">Submit</button>
+        <button type="button" id="backToMenu" class="btn btn-secondary mt-3">Back to Main Menu</button>
+        <h3 id="scoreReveal" class="mt-4"></h3>
+      
+    </form>
+
+    <!-- Link Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <!-- Link script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- make it so that i can return to the main menu
+
+
+ChatGPT said:
+Got it! To allow returning to the main menu from the quiz, we need to:
+
+Add a "Back to Main Menu" button somewhere in the quiz form.
+
+Write a JavaScript function that will hide the quiz and show the start screen again when that button is clicked.
+
+Here’s how you can do it:
+
+Step 1: Add the "Back to Main Menu" button inside your <form id="quiz">
+html
+Copy
+Edit
+<button type="button" id="backToMenu" class="btn btn-secondary mt-3">Back to Main Menu</button>
+Place it just before or after the Submit button, for example:
+
+html
+Copy
+Edit
+<button id="btn" type="submit" class="btn btn-primary mt-3">Submit</button>
+<button type="button" id="backToMenu" class="btn btn-secondary mt-3 ms-2">Back to Main Menu</button>
+Step 2: Add JavaScript to handle showing/hiding screens
+In your script.js (or inside a <script> tag if inline), add:
+
+js
+Copy
+Edit
+function startQuiz(difficulty) {
+    // Hide start screen
+    document.getElementById('start-screen').style.display = 'none';
+    // Show quiz
+    document.getElementById('quiz').style.display = 'block';
+
+    // Optionally use difficulty param for difficulty settings
+}
+
+// Hide quiz initially
+document.getElementById('quiz').style.display = 'none';
+
+// Back to main menu button functionality
+document.getElementById('backToMenu').addEventListener('click', () => {
+    // Show start screen
+    document.getElementById('start-screen').style.display = 'block';
+    // Hide quiz form
+    document.getElementById('quiz').style.display = 'none';
+    // Clear score reveal if any
+    document.getElementById('scoreReveal').textContent = '';
+    // Optionally reset the quiz form here if needed
+    document.getElementById('quiz').reset();
+});
+Step 3: Make sure on page load the quiz is hidden and start screen visible
+Add this snippet at the bottom of your JS or inline script:
+
+js
+Copy
+Edit
+window.onload = () => {
+    document.getElementById('start-screen').style.display = 'block';
+    document.getElementById('quiz').style.display = 'none';
+};
+Summary of changes:
+Add "Back to Main Menu" button to the quiz.
+
+Use JavaScript to toggle visibility between quiz and start screen.
+
+Reset form and clear score display when going back.
+
+If you want, I can also provide a full fixed HTML + JS example for you! Would you like that?
+
+
+
+
+
+
+
+
+Tools
+
+
+
+ChatGPT can make mistakes. Check important info. -->
