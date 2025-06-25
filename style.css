@@ -1,0 +1,134 @@
+/* Cartoon turf background using a repeating turf-like pattern */
+body {
+    background: linear-gradient(#4CAF50 45%, #388E3C 55%);
+    background-size: 100% 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Central container for the quiz content */
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* Card-style content box */
+#start-screen, #quiz {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(4px);
+}
+
+/* Fun, bold headings */
+h1 {
+    color: #1a73e8;
+    font-weight: 700;
+}
+
+h2 {
+    color: #00796B;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+h3 {
+    color: #d32f2f;
+    margin-top: 1.5rem;
+}
+
+/* Group spacing */
+.question-group {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #ccc;
+}
+
+/* Radio & text input spacing */
+input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+input[type="text"] {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Labels */
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+/* Buttons - large, rounded, shadowed */
+button {
+    padding: 0.6rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Scoreboard-style header */
+#scoreboard {
+    background: #111;
+    color: #0f0;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    border-bottom: 5px solid #0f0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+}
+
+/* Animated goal lines on the sides */
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 10px;
+    background: repeating-linear-gradient(
+        to bottom,
+        white,
+        white 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    animation: scrollLines 2s linear infinite;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+body::before {
+    left: 0;
+}
+
+body::after {
+    right: 0;
+}
+
+/* Scroll animation */
+@keyframes scrollLines {
+    0% {
+        background-position-y: 0;
+    }
+    100% {
+        background-position-y: 20px;
+    }
+}
